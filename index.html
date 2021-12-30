@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Arwa Alanqary</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    <style>
+          #header {
+            background-color: #f4f4f4;
+            /*background-color: #FFFFFF;*/
+            display: flex;
+            align-items: flex-end;
+            padding-top:40px;
+            padding-bottom:40px;
+          }
+
+          #projects {
+            display: flex;
+            align-items: flex-end;
+            padding-top:20px;
+            padding-bottom:20px;
+          }
+
+          #publications {
+            display: flex;
+            align-items: flex-end;
+            padding-top:20px;
+            padding-bottom:20px;
+          }
+
+          #header-text-name {
+            font-size: 40px;
+          }
+          #header-text-email {
+            font-size: 20px;
+            /*font-style: italic;*/
+          }
+          #section {
+            font-size: 40px;
+            border-bottom:0.5px solid #CCC;
+            margin-bottom: 20px
+          }
+          #subsection {
+            font-size: 20px;
+            font-weight: bold;
+          }
+          #portrait {
+            width:210px;
+            padding:20px;
+          }
+          .text_block {
+            text-align: justify;
+            text-justify: inter-word;
+          }
+    </style>
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Arwa Alanqary</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Header-->
+        <div id='header'>
+            <div class='container'>
+                <p style="float: left;">
+                    <img src='assets/portrait.jpg' class='img' id='portrait'>
+                </p>
+                <div class="text_block">
+                    <div id='header-text-name'>Arwa Alanqary</div>
+                    <div id='header-text-email'>arwa@berkeley.edu</div>
+                    I am a first year Ph.D. student in Civil and Envirnomental Engineering at UC Berkeley, advised by Alexandre Bayen and a member of the <a href="https://bayen.berkeley.edu/home">Mobile Sensing Lab</a>. Previously, I completed my M.Sc. in <a href="https://cse.mit.edu/">Computational Science and Engineering</a> at MIT, where I was advised by <a href="https://devavrat.mit.edu/">Devavrat Shah</a>. My research interest are at the intersection of optimization, statistical learning, and control of dynamical systems. My current research focuses on developing and analysing data-driven methods for control and decision-making, motivated by applications in transportation systems. 
+                    <p style="text-align: right; margin-top: 20px;">
+                        <a href="https://github.com/ArwaAlanqary">[GitHub]</a>
+                        <a href="https://scholar.google.com/citations?user=A8yqJ8YAAAAJ&hl=en">[Google Scholar]</a>
+                        <a href="https://linkedin.com/in/arwa-alanqary-870404106/">[LinkedIn]</a>
+                        <a href="assets/CV_Arwa Alanqary.pdf">[Download CV]</a>
+                    </p>
+                </div>   
+                
+            </div>
+        </div>
+
+        <!-- Projects-->
+        <div id='projects'>
+            <div class='container'>
+                <div id='section'>Research</div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src='assets/project-acc.gif', class='img-fluid'>
+                    </div>
+                    <div class="col-8">
+                        <div class="text_block">
+                            <div id='subsection'>Optimal Cruise Control</div>
+                            In this project we design and analyze a non-linear optimal control scheme with the objective of smoothing unstable traffic flows in predominantly human-driven traffic. We model the non-linear dynamics of the system using a car-following model and we design our objective function to achieve traffic smoothing and reduction in fuel consumption. Given this problem setup, we use Pontryagin’s maximum principle (PMP) optimality conditions and the adjoint method to devise a numerical algorithm to solve this system and obtain the optimal control input. We demonstrate the effectiveness of our approach on real-world trajectories data collected from the I-24 in Tennessee. 
+                            <p style="text-align: right;">
+<!--                                 <a href="XXXX">[Paper]</a>
+                                <a href="XXXX">[Code]</a>
+                                <a href="XXX">[Video]</a> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src='assets/project-cpd.png', class='img-fluid'>
+                    </div>
+                    <div class="col-8">
+                        <div class="text_block">
+                            <div id='subsection'>Change Point Detection</div>
+                            Detection of abrupt changes in time series data is an important subject of study in applied statistics that covers many real-life applications, from medical diagnosis to fraud detection. In this project, we develop, theoretically analyze, and empirically evaluate an online algorithm for change point detection (CPD) in multivariate time series based on multivariate singular spectrum analysis.
+                            <p style="text-align: right;">
+                                <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">[Paper]</a>
+                                <a href="https://github.com/ArwaAlanqary/mSSA_cpd">[Code]</a>
+                                <!-- <a href="XXX">[Video]</a> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src='assets/project-btom.png', class='img-fluid'>
+                    </div>
+                    <div class="col-8">
+                        <div class="text_block">
+                            <div id='subsection'>Baysian Theory of Mind: Modelling Human Mistakes</div>
+                            Humans have an innate ability to reason about the goals of others in their environment by observing their behavior. Remarkably, we, as humans, can do so even in the presence of mistakes or failures to achieve such goals. In this project, we explore the question of how to allow machines to have similar capabilities of reasoning about the mistakes of other agents in their environments. To do so, we model agents and their environments as generative processes that account for sub-optimality at three levels of decision-making: goal confusion with semantically similar goals, errors in planning, and mistakes in taking actions. 
+                            <p style="text-align: right;">
+                                <a href="https://arxiv.org/pdf/2106.13249.pdf">[Paper]</a>
+  <!--                               <a href="XXXX">[Code]</a>
+                                <a href="XXX">[Video]</a> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div id='publications'>
+            <div class='container'>
+                <div id='section'>Publications</div>
+                <div class="row">
+                    <div class="col-2">
+                        2021
+                    </div>
+                    <div class="col-10">
+                        <div class="text_block">
+                            <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">Change Point Detection via Multivariate Singular Spectrum Analysis</a>
+                            <br>
+                            Arwa Alanqary, Abdullah Alomar, Devavrat Shah
+                            <br>
+                            Advances in Neural Information Processing Systems (NeurIPS) 34
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-2">
+                        2021
+                    </div>
+                    <div class="col-10">
+                        <div class="text_block">
+                            <a href="https://arxiv.org/pdf/2106.13249.pdf">Modeling the Mistakes of Boundedly Rational Agents Within a Bayesian Theory of Mind</a>
+                            <br>
+                            Arwa Alanqary, Gloria Z. Lin, Joie Le, Tan Zhi-Xuan, Vikash Mansinghka, Joshua Tenenbaum
+                            <br>
+                            Annual Conference of the Cognitive Science Society (CogSci) 
+                            <br>
+                            ICRA: Social Intelligence in Humans and Robots Workshop
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
