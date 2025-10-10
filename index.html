@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Arwa Alanqary</title>
+        <title>Arwa Alanqary dd</title>
+        <title> </title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -87,24 +88,33 @@
 
 
         <!-- Header-->
-        <div id='header'>
-            <div class='container'>
-                <p style="float: left;">
-                    <img src='assets/portrait.jpg' class='img' id='portrait'>
-                </p>
-                <div class="text_block">
-                    <div id='header-text-name'>Arwa Alanqary</div>
-                    <div id='header-text-email'>arwa@berkeley.edu</div>
-                    I am a second year Ph.D. student in Electrical Engineering and Computer Sciences (EECS) at UC Berkeley and a member of the <a href="https://bayen.berkeley.edu/home">Mobile Sensing Lab</a> advised by Alexandre Bayen. Previously, I completed my M.Sc. in <a href="https://cse.mit.edu/">Computational Science and Engineering</a> at MIT, where I was advised by <a href="https://devavrat.mit.edu/">Devavrat Shah</a>. My research interest are at the intersection of optimization, statistical learning, and control of dynamical systems. My current research focuses on developing and analysing data-driven methods for control and decision-making, motivated by applications in transportation systems. 
-                    <p style="text-align: right; margin-top: 20px;">
-<!--                         <a href="https://github.com/ArwaAlanqary">[GitHub]</a>
- -->                        <a href="https://scholar.google.com/citations?user=A8yqJ8YAAAAJ&hl=en">[Google Scholar]</a>
-                        <a href="https://linkedin.com/in/arwa-alanqary-870404106/">[LinkedIn]</a>
-                        <a href="assets/CV_Arwa Alanqary.pdf">[Download CV]</a>
-                    </p>
-                </div>   
-                
+        <div id="header">
+        <div class="container" style="display: flex; align-items: flex-start; gap: 20px;">
+            <img src="assets/portrait.jpg" class="img" id="portrait" style="width: 200px; height: auto; border-radius: 8px;">
+
+            <div class="text_block" style="flex: 1;">
+            <div id="header-text-name" style="font-size: 1.5em; font-weight: bold;">Arwa Alanqary</div>
+            <div id="header-text-email" style="color: gray;">arwa@berkeley.edu</div>
+
+            <p>
+                Hello! I am a Ph.D. student in EECS at UC Berkeley advised by Alexandre Bayen.
+                My research focuses on learning, control, and decision-making in societal-scale multi-agent systems.
+                I aim to design rules and algorithms that incentivize desirable outcomes in such systems and enable agents to learn in the presence of strategic behavior, uncertainty, and limited resources.
+                I seek to develop algorithms with guarantees on both performance and normative objectives such as fairness, privacy, and social welfare.
+                My work draws inspiration from control theory, optimization, and game theory.
+            </p>
+
+            <p>
+                Prior to joining Berkeley, I received my M.Sc. in Computational Science and Engineering at MIT and B.Sc. in Mechanical Engineering from Alfaisal University.
+            </p>
+
+            <p style="text-align: right; margin-top: 20px;">
+                <a href="https://scholar.google.com/citations?user=A8yqJ8YAAAAJ&hl=en">[Google Scholar]</a>
+                <a href="https://linkedin.com/in/arwa-alanqary-870404106/">[LinkedIn]</a>
+                <a href="assets/CV_Arwa Alanqary.pdf">[Download CV]</a>
+            </p>
             </div>
+        </div>
         </div>
 
         <!-- Projects-->
@@ -113,19 +123,49 @@
                 <div id='section'>Research</div>
                 <div class="row">
                     <div class="col-4">
+                        <img src='assets/project_fairness.png', class='img-fluid'>
+                    </div>
+                    <div class="col-8">
+                        <div class="text_block">
+                            <div id='subsection'>Fair allocation and pricing in congestion games</div>
+                            This project focuses on the studying the effecincy-fairness tradeoff intrinsic to the congestion games model 
+                            focusing on the problem of fair traffic assignement and congestion pricing.
+                            We propose rebust fairness metrics in such models and study algorithms for achieving fair traffic assignements that can be enforeced through fair tolls.
+                        </div>
+                    </div>
+
+                    <p style="text-align: right;">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10886283">[Paper]</a>
+                        </p>
+                </div>
+                <div class="row">
+                    <div class="col-4">
                         <img src='assets/project-acc.gif', class='img-fluid'>
                     </div>
                     <div class="col-8">
                         <div class="text_block">
-                            <div id='subsection'>Optimal Cruise Control</div>
-                            In this project we design and analyze a non-linear optimal control scheme with the objective of smoothing unstable traffic flows in predominantly human-driven traffic. We model the non-linear dynamics of the system using a car-following model and we design our objective function to achieve traffic smoothing and reduction in fuel consumption. Given this problem setup, we use Pontryagin’s maximum principle (PMP) optimality conditions and the adjoint method to devise a numerical algorithm to solve this system and obtain the optimal control input. We demonstrate the effectiveness of our approach on real-world trajectories data collected from the I-24 in Tennessee. 
-                            <p style="text-align: right;">
-<!--                                 <a href="XXXX">[Paper]</a>
-                                <a href="XXXX">[Code]</a>
-                                <a href="XXX">[Video]</a> -->
-                            </p>
+                            <div id='subsection'>Mixed-autonomy traffic optimization</div>
+                            This project aims to reduce instabilities ("stop-and-go" waves) in mixed-autonomy traffic flow by controlling a small proportion of autonomouse vehicles (AVs).
+                            We developed a hirarical control archetecture based on local and global traffic state. 
+                            The developed controller was deployed at a large scale in a 100-vehicle field experiment conducted on the I-24 highway during the morning rush hour. 
+                            Overall, our results show that a small proportion of well-controlled AVs is enough to significantly improve traffic flow and fuel efficiency for all drivers on the road. 
+                            <!-- In this project we design and analyze a non-linear optimal control scheme with 
+                             the objective of smoothing unstable traffic flows in predominantly human-driven traffic. 
+                             We model the non-linear dynamics of the system using a car-following model and we design 
+                             our objective function to achieve traffic smoothing and reduction in fuel consumption. 
+                             Given this problem setup, we use Pontryagin’s maximum principle (PMP) optimality conditions and 
+                             the adjoint method to devise a numerical algorithm to solve this system and obtain the optimal 
+                             control input. We demonstrate the effectiveness of our approach on real-world trajectories data 
+                             collected from the I-24 in Tennessee.  -->
                         </div>
                     </div>
+                    <p style="text-align: right;">
+                                <a href="https://circles-consortium.github.io/">[Website]</a>
+                                <a href="https://arxiv.org/abs/2508.19417">[Paper-Optimal control]</a>
+                                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10858622">[Paper-MegaVenderTest]</a>
+                                <a href="https://arxiv.org/abs/2310.18151">[Paper-MegaVenderTest]</a>
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0968090X24002857">[Paper-Speed planner]</a>
+                    </p>
                 </div>
                 <div class="row">
                     <div class="col-4">
@@ -153,8 +193,6 @@
                             Humans have an innate ability to reason about the goals of others in their environment by observing their behavior. Remarkably, we, as humans, can do so even in the presence of mistakes or failures to achieve such goals. In this project, we explore the question of how to allow machines to have similar capabilities of reasoning about the mistakes of other agents in their environments. To do so, we model agents and their environments as generative processes that account for sub-optimality at three levels of decision-making: goal confusion with semantically similar goals, errors in planning, and mistakes in taking actions. 
                             <p style="text-align: right;">
                                 <a href="https://arxiv.org/pdf/2106.13249.pdf">[Paper]</a>
-  <!--                               <a href="XXXX">[Code]</a>
-                                <a href="XXX">[Video]</a> -->
                             </p>
                         </div>
                     </div>
@@ -169,11 +207,75 @@
                 <div id='section'>Publications</div>
                 <div class="row">
                     <div class="col-2">
+                        2025
+                    </div>
+                    <div class="col-10">
+                        <div class="text_block">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10858622">Traffic control via connected and automated vehicles (cavs): An open-road field experiment with 100 cavs</a>
+                            <br>
+                            CIRCLES consortium
+                            <br>
+                            IEEE Control Systems (CSM)
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-2">
+                        2025
+                    </div>
+                    <div class="col-10">
+                        <div class="text_block">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10858639">Traffic Smoothing Using Explicit Local Controllers: Experimental Evidence for Dissipating Stop-and-go Waves with a Single Automated Vehicle in Dense Traffic</a>
+                            <br>
+                            Amaury Hayat, Arwa Alanqary, Rahul Bhadani, et al. 
+                            <br>
+                            IEEE Control Systems (CSM)
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-2">
+                        2025
+                    </div>
+                    <div class="col-10">
+                        <div class="text_block">
+                            <a href="https://www.sciencedirect.com/science/article/pii/S0968090X24002857">Kernel-based planning and imitation learning control for flow smoothing in mixed autonomy traffic</a>
+                            <br>
+                            Zhe Fu, Arwa Alanqary, Abdul Rahman Kreidieh, Alexandre M Bayen
+                            <br>
+                            Transportation Research Part C: Emerging Technologies
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-2">
+                        2024
+                    </div>
+                    <div class="col-10">
+                        <div class="text_block">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10886283">Improving Social Cost in Traffic Routing with Bounded Regret via Second-Best Tolls</a>
+                            <br>
+                            Arwa Alanqary, Abdul Rahman Kreidieh, Samitha Samaranayake, Alexandre M Bayen
+                            <br>
+                            63rd IEEE Conference on Decision and Control (CDC)
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-2">
                         2023
                     </div>
                     <div class="col-10">
                         <div class="text_block">
-                            <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">Optimal Control of Autonomous Vehicles for Flow Smoothing in Mixed Autonomy Traffic</a>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10383810">Optimal Control of Autonomous Vehicles for Flow Smoothing in Mixed Autonomy Traffic</a>
                             <br>
                             Arwa Alanqary, Xiaoqian Gong, Alexander Keimer, Benjamin Seibold, Benedetto Piccoli, Alexandre Bayen
                             <br>
