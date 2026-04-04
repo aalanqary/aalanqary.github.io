@@ -3,373 +3,459 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Arwa Alanqary dd</title>
-        <title> </title>
-        <!-- Favicon-->
+        <meta name="description" content="Arwa Alanqary personal website" />
+        <meta name="author" content="Arwa Alanqary" />
+        <title>Arwa Alanqary </title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-    <style>
+        <style>
+          :root {
+            --section-padding: 3.5rem;
+            --card-radius: 16px;
+            --border-color: #e5e7eb;
+            --muted-color: #6b7280;
+          }
+
+          html {
+            scroll-behavior: smooth;
+          }
+
+          body {
+            line-height: 1.65;
+          }
+
+          .navbar {
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+          }
+
           #header {
             background-color: #f4f4f4;
-            /*background-color: #FFFFFF;*/
-            display: flex;
-            align-items: flex-end;
-            padding-top:40px;
-            padding-bottom:40px;
+            padding-top: 40px;
+            padding-bottom: 40px;
           }
 
-          #projects {
-            display: flex;
-            align-items: flex-end;
-            padding-top:20px;
-            padding-bottom:20px;
-          }
-
+          #projects,
           #publications {
-            display: flex;
-            align-items: flex-end;
-            padding-top:20px;
-            padding-bottom:20px;
+            padding-top: var(--section-padding);
+            padding-bottom: 0;
           }
 
           #header-text-name {
-            font-size: 40px;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            line-height: 1.1;
           }
+
           #header-text-email {
-            font-size: 20px;
-            /*font-style: italic;*/
+            font-size: 1.1rem;
+            color: var(--muted-color);
+            word-break: break-word;
           }
+
           #section {
-            font-size: 40px;
-            border-bottom:0.5px solid #CCC;
-            margin-bottom: 20px
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            border-bottom: 0.5px solid #ccc;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
           }
+
           #subsection {
-            font-size: 20px;
-            font-weight: bold;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
           }
+
           #portrait {
-            width:210px;
-            padding:20px;
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            border-radius: 8px;
+            display: block;
           }
+
           .text_block {
             text-align: justify;
             text-justify: inter-word;
+            min-width: 0;
           }
-    </style>
+
+          .header-links,
+          .resource-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem 1rem;
+            margin-top: 1rem;
+          }
+
+          .project-row,
+          .publication-row {
+            margin-bottom: 1.5rem;
+          }
+
+          .project-card,
+          .publication-card {
+            border: 1px solid var(--border-color);
+            border-radius: var(--card-radius);
+            padding: 1.25rem;
+            background: #fff;
+            height: 100%;
+          }
+
+          .project-media img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+          }
+
+          .publication-year {
+            font-weight: 700;
+            color: var(--muted-color);
+          }
+
+          .publication-card a {
+            font-weight: 600;
+          }
+
+          @media (max-width: 767.98px) {
+            :root {
+              --section-padding: 2.5rem;
+            }
+
+            #header {
+              padding-top: 28px;
+              padding-bottom: 28px;
+            }
+
+            .text_block {
+              text-align: left;
+            }
+
+            .project-card,
+            .publication-card {
+              padding: 1rem;
+            }
+          }
+        </style>
     </head>
     <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div class="container">
-                <!-- <a class="navbar-brand" href="#">Arwa Alanqary</a> -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#projects">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#header">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#projects">Research</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#publications">Publications</a></li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
 
-
-        <!-- Header-->
         <div id="header">
-        <div class="container" style="display: flex; align-items: flex-start; gap: 20px;">
-            <img src="assets/portrait.jpg" class="img" id="portrait" style="width: 200px; height: auto; border-radius: 8px;">
+            <div class="container">
+                <div class="row align-items-start g-4 g-lg-5">
+                    <div class="col-12 col-md-auto text-center text-md-start">
+                        <img src="assets/portrait.jpg" class="img-fluid" id="portrait" alt="Portrait of Arwa Alanqary" />
+                    </div>
 
-            <div class="text_block" style="flex: 1;">
-            <div id="header-text-name" style="font-size: 1.5em; font-weight: bold;">Arwa Alanqary</div>
-            <div id="header-text-email" style="color: gray;">arwa@berkeley.edu</div>
+                    <div class="col-12 col-md">
+                        <div class="text_block">
+                            <div id="header-text-name">Arwa Alanqary | <span lang="ar" dir="rtl">أروى العنقري</span> </div>
+                            <div id="header-text-email">arwa@berkeley.edu</div>
 
-            <p>
-                Hello! I am a Ph.D. student in EECS at UC Berkeley advised by Alexandre Bayen.
-                My research focuses on learning, control, and decision-making in societal-scale multi-agent systems.
-                I aim to design rules and algorithms that incentivize desirable outcomes in such systems and enable agents to learn in the presence of strategic behavior, uncertainty, and limited resources.
-                I seek to develop algorithms with guarantees on both performance and normative objectives such as fairness, privacy, and social welfare.
-                My work draws inspiration from control theory, optimization, and game theory.
-            </p>
+                            <p class="mt-3">
+                                I am a Ph.D. student in EECS at UC Berkeley, advised by Alexandre Bayen.
+                                My research focuses on learning, control, and decision-making in societal-scale multi-agent systems.
+                                I aim to design rules and algorithms that incentivize desirable outcomes in such systems and enable agents to learn in the presence of strategic behavior, uncertainty, and limited resources.
+                                I seek to develop algorithms with guarantees on both performance and normative objectives such as fairness, privacy, and social welfare.
+                                My work draws inspiration from control theory, optimization, and game theory.
+                            </p>
 
-            <p>
-                Prior to joining Berkeley, I received my M.Sc. in Computational Science and Engineering at MIT and B.S. in Mechanical Engineering from Alfaisal University.
-            </p>
+                            <p class="mb-0">
+                                I was a Student Researcher at Google Research in the summer and Fall of 2024, hosted by Carolina Osario and Shoshana Vasserman. In the summer of 2025, I was an Applied Scientist intern at Amazon hosted by Fabien Chraim and Marina Thottan.
 
-            <p style="text-align: right; margin-top: 20px;">
-                <a href="https://scholar.google.com/citations?user=A8yqJ8YAAAAJ&hl=en">[Google Scholar]</a>
-                <a href="https://linkedin.com/in/arwa-alanqary-870404106/">[LinkedIn]</a>
-                <a href="assets/CV_Arwa Alanqary.pdf">[Download CV]</a>
-            </p>
+                                Prior to joining Berkeley, I received my M.Sc. in Computational Science and Engineering at MIT (Advised by Devavrat Shah) and B.S. in Mechanical Engineering from Alfaisal University.
+                            </p>
+
+                            <div class="header-links">
+                                <a href="https://scholar.google.com/citations?user=A8yqJ8YAAAAJ&hl=en">[Google Scholar]</a>
+                                <a href="https://linkedin.com/in/arwa-alanqary-870404106/">[LinkedIn]</a>
+                                <a href="assets/CV_Arwa Alanqary.pdf">[Download CV]</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div id="projects">
+            <div class="container">
+                <div id="section">Research</div>
+
+                <div class="project-row">
+                    <div class="project-card">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-12 col-md-4 project-media">
+                                <img src="assets/project_recommendations.png" class="img-fluid" alt="Learning Preferences and Multi-agent Coordination" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="text_block">
+                                    <div id="subsection">Learning Preferences and Coordination in Strategic Settings</div>
+                                    This project studies how to learn agent preferences and design recommendation or coordination mechanisms in unknown games. It combines ideas from game theory, online learning, and optimization to understand strategic behavior and enable efficient coordination when the underlying game is not known in advance.
+                                </div>
+                                <div class="resource-links">
+                                    <a href="https://arxiv.org/abs/2602.16998">[Paper]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+
+                <div class="project-row">
+                    <div class="project-card">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-12 col-md-4 project-media">
+                                <img src="assets/project_fairness.png" class="img-fluid" alt="Fair allocation and pricing in congestion games" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="text_block">
+                                    <div id="subsection">Fair allocation and pricing in congestion games</div>
+                                    This project focuses on the studying the effecincy-fairness tradeoff intrinsic to the congestion games model
+                                    focusing on the problem of fair traffic assignement and congestion pricing.
+                                    We propose rebust fairness metrics in such models and study algorithms for achieving fair traffic assignements that can be enforeced through fair tolls.
+                                </div>
+                                <div class="resource-links">
+                                    <a href="https://ieeexplore.ieee.org/abstract/document/10886283">[Paper]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-card">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-12 col-md-4 project-media">
+                                <img src="assets/project-acc.gif" class="img-fluid" alt="Mixed-autonomy traffic optimization" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="text_block">
+                                    <div id="subsection">Mixed-autonomy traffic optimization</div>
+                                    This project aims to reduce instabilities ("stop-and-go" waves) in mixed-autonomy traffic flow by controlling a small proportion of autonomouse vehicles (AVs).
+                                    We developed a hirarical control archetecture based on local and global traffic state.
+                                    The developed controller was deployed at a large scale in a 100-vehicle field experiment conducted on the I-24 highway during the morning rush hour.
+                                    Overall, our results show that a small proportion of well-controlled AVs is enough to significantly improve traffic flow and fuel efficiency for all drivers on the road.
+                                </div>
+                                <div class="resource-links">
+                                    <a href="https://circles-consortium.github.io/">[Project Website]</a>
+                                    <a href="https://arxiv.org/abs/2508.19417">[Optimal control paper]</a>
+                                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10858622">[Paper-MegaVenderTest]</a>
+                                    <a href="https://arxiv.org/abs/2310.18151">[MegaVenderTest paper]</a>
+                                    <a href="https://www.sciencedirect.com/science/article/pii/S0968090X24002857">[Speed planner paper]</a>
+                                    <a href="https://abc7news.com/post/uc-berkeley-open-track-experiment-alleviating-traffic-jams-circles-consortium-car-automation-software/12469669/?userab=abc_web_player-460*variant_b_abc_dmp-1901%2Cotv_web_player-461*variant_a_otv_control-1902">[ABC 7 News feature]</a>
+                                    <a href="https://fortune.com/2022/12/06/nissan-gm-toyota-ai-cruise-control-phantom-traffic-jams/">[Fortune article]</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-card">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-12 col-md-4 project-media">
+                                <img src="assets/project-cpd.png" class="img-fluid" alt="Change Point Detection" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="text_block">
+                                    <div id="subsection">Change Point Detection</div>
+                                    Detection of abrupt changes in time series data is an important subject of study in applied statistics that covers many real-life applications, from medical diagnosis to fraud detection. In this project, we develop, theoretically analyze, and empirically evaluate an online algorithm for change point detection (CPD) in multivariate time series based on multivariate singular spectrum analysis.
+                                </div>
+                                <div class="resource-links">
+                                    <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">[Paper]</a>
+                                    <a href="https://github.com/ArwaAlanqary/mSSA_cpd">[Code]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-card">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-12 col-md-4 project-media">
+                                <img src="assets/project-btom.png" class="img-fluid" alt="Bayesian Theory of Mind: Modelling Human Mistakes" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <div class="text_block">
+                                    <div id="subsection">Baysian Theory of Mind: Modelling Human Mistakes</div>
+                                    Humans have an innate ability to reason about the goals of others in their environment by observing their behavior. Remarkably, we, as humans, can do so even in the presence of mistakes or failures to achieve such goals. In this project, we explore the question of how to allow machines to have similar capabilities of reasoning about the mistakes of other agents in their environments. To do so, we model agents and their environments as generative processes that account for sub-optimality at three levels of decision-making: goal confusion with semantically similar goals, errors in planning, and mistakes in taking actions.
+                                </div>
+                                <div class="resource-links">
+                                    <a href="https://arxiv.org/pdf/2106.13249.pdf">[Paper]</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Projects-->
-        <div id='projects'>
-            <div class='container'>
-                <div id='section'>Research</div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src='assets/project_fairness.png', class='img-fluid'>
-                    </div>
-                    <div class="col-8">
-                        <div class="text_block">
-                            <div id='subsection'>Fair allocation and pricing in congestion games</div>
-                            This project focuses on the studying the effecincy-fairness tradeoff intrinsic to the congestion games model 
-                            focusing on the problem of fair traffic assignement and congestion pricing.
-                            We propose rebust fairness metrics in such models and study algorithms for achieving fair traffic assignements that can be enforeced through fair tolls.
-                        </div>
-                    </div>
-
-                    <p style="text-align: right;">
-                                <a href="https://ieeexplore.ieee.org/abstract/document/10886283">[Paper]</a>
-                        </p>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src='assets/project-acc.gif', class='img-fluid'>
-                    </div>
-                    <div class="col-8">
-                        <div class="text_block">
-                            <div id='subsection'>Mixed-autonomy traffic optimization</div>
-                            This project aims to reduce instabilities ("stop-and-go" waves) in mixed-autonomy traffic flow by controlling a small proportion of autonomouse vehicles (AVs).
-                            We developed a hirarical control archetecture based on local and global traffic state. 
-                            The developed controller was deployed at a large scale in a 100-vehicle field experiment conducted on the I-24 highway during the morning rush hour. 
-                            Overall, our results show that a small proportion of well-controlled AVs is enough to significantly improve traffic flow and fuel efficiency for all drivers on the road. 
-                            <!-- In this project we design and analyze a non-linear optimal control scheme with 
-                             the objective of smoothing unstable traffic flows in predominantly human-driven traffic. 
-                             We model the non-linear dynamics of the system using a car-following model and we design 
-                             our objective function to achieve traffic smoothing and reduction in fuel consumption. 
-                             Given this problem setup, we use Pontryagin’s maximum principle (PMP) optimality conditions and 
-                             the adjoint method to devise a numerical algorithm to solve this system and obtain the optimal 
-                             control input. We demonstrate the effectiveness of our approach on real-world trajectories data 
-                             collected from the I-24 in Tennessee.  -->
-                        </div>
-                    </div>
-                    <p style="text-align: right;">
-                                <a href="https://circles-consortium.github.io/">[Website]</a>
-                                <a href="https://arxiv.org/abs/2508.19417">[Paper-Optimal control]</a>
-                                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10858622">[Paper-MegaVenderTest]</a>
-                                <a href="https://arxiv.org/abs/2310.18151">[Paper-MegaVenderTest]</a>
-                                <a href="https://www.sciencedirect.com/science/article/pii/S0968090X24002857">[Paper-Speed planner]</a>
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src='assets/project-cpd.png', class='img-fluid'>
-                    </div>
-                    <div class="col-8">
-                        <div class="text_block">
-                            <div id='subsection'>Change Point Detection</div>
-                            Detection of abrupt changes in time series data is an important subject of study in applied statistics that covers many real-life applications, from medical diagnosis to fraud detection. In this project, we develop, theoretically analyze, and empirically evaluate an online algorithm for change point detection (CPD) in multivariate time series based on multivariate singular spectrum analysis.
-                            <p style="text-align: right;">
-                                <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">[Paper]</a>
-                                <a href="https://github.com/ArwaAlanqary/mSSA_cpd">[Code]</a>
-                                <!-- <a href="XXX">[Video]</a> -->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src='assets/project-btom.png', class='img-fluid'>
-                    </div>
-                    <div class="col-8">
-                        <div class="text_block">
-                            <div id='subsection'>Baysian Theory of Mind: Modelling Human Mistakes</div>
-                            Humans have an innate ability to reason about the goals of others in their environment by observing their behavior. Remarkably, we, as humans, can do so even in the presence of mistakes or failures to achieve such goals. In this project, we explore the question of how to allow machines to have similar capabilities of reasoning about the mistakes of other agents in their environments. To do so, we model agents and their environments as generative processes that account for sub-optimality at three levels of decision-making: goal confusion with semantically similar goals, errors in planning, and mistakes in taking actions. 
-                            <p style="text-align: right;">
-                                <a href="https://arxiv.org/pdf/2106.13249.pdf">[Paper]</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <div id="publications">
+            <div class="container">
+                <div id="section">Selected Publications</div>
                 
 
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2026</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://arxiv.org/abs/2602.16998">Learning to Recommend in Unknown Games</a><br />
+                                Arwa Alanqary, Zakaria Baba, Manxi Wu, Alexandre M. Bayen<br />
+                                Preprint
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2026</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://arxiv.org/abs/2601.16187">Average Unfairness in Routing Games</a><br />
+                                Arwa Alanqary, Pan-Yang Su, Bryce L. Ferguson, Manxi Wu, Alexandre M. Bayen, Shankar Sastry<br />
+                                The 25th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2025</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10858622">Traffic control via connected and automated vehicles (cavs): An open-road field experiment with 100 cavs</a><br />
+                                CIRCLES consortium<br />
+                                IEEE Control Systems (CSM)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2025</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10858639">Traffic Smoothing Using Explicit Local Controllers: Experimental Evidence for Dissipating Stop-and-go Waves with a Single Automated Vehicle in Dense Traffic</a><br />
+                                Amaury Hayat, Arwa Alanqary, Rahul Bhadani, et al.<br />
+                                IEEE Control Systems (CSM)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2025</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://www.sciencedirect.com/science/article/pii/S0968090X24002857">Kernel-based planning and imitation learning control for flow smoothing in mixed autonomy traffic</a><br />
+                                Zhe Fu, Arwa Alanqary, Abdul Rahman Kreidieh, Alexandre M Bayen<br />
+                                Transportation Research Part C: Emerging Technologies
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2024</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10886283">Improving Social Cost in Traffic Routing with Bounded Regret via Second-Best Tolls</a><br />
+                                Arwa Alanqary, Abdul Rahman Kreidieh, Samitha Samaranayake, Alexandre M Bayen<br />
+                                63rd IEEE Conference on Decision and Control (CDC)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2023</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://ieeexplore.ieee.org/abstract/document/10383810">Optimal Control of Autonomous Vehicles for Flow Smoothing in Mixed Autonomy Traffic</a><br />
+                                Arwa Alanqary, Xiaoqian Gong, Alexander Keimer, Benjamin Seibold, Benedetto Piccoli, Alexandre Bayen<br />
+                                62nd IEEE Conference on Decision and Control (CDC)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2021</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">Change Point Detection via Multivariate Singular Spectrum Analysis</a><br />
+                                Arwa Alanqary, Abdullah Alomar, Devavrat Shah<br />
+                                Advances in Neural Information Processing Systems (NeurIPS) 34
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2021</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://arxiv.org/pdf/2106.13249.pdf">Modeling the Mistakes of Boundedly Rational Agents Within a Bayesian Theory of Mind</a><br />
+                                Arwa Alanqary, Gloria Z. Lin, Joie Le, Tan Zhi-Xuan, Vikash Mansinghka, Joshua Tenenbaum<br />
+                                Annual Conference of the Cognitive Science Society (CogSci)<br />
+                                ICRA: Social Intelligence in Humans and Robots Workshop
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                 <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2019</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="assets/Timeseries imputation.pdf">An Adaptive Algorithm for Time-series Imputation Using Matrix Estimation Methods.</a><br />
+                                Abdullah Alomar, Arwa Alanqary, Mansour Alsaleh, Devavrat Shah<br />
+                                NBER-NSF Time Series Conference
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="publication-row">
+                    <div class="publication-card">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-2 publication-year">2018</div>
+                            <div class="col-12 col-md-10 text_block">
+                                <a href="https://www.researchgate.net/profile/Boumediene-Hamzi/publication/309426905_Preliminary_Results_on_a_Maximum_Mean_Discrepancy_Approach_for_Seizure_Detection/links/58104df808aee15d49121926/Preliminary-Results-on-a-Maximum-Mean-Discrepancy-Approach-for-Seizure-Detection.pdf">Preliminary Results on Maximum Mean Discrepancy Approach for Seizure Detection.</a><br />
+                                Boumediene Hamzi, Turky N Alotaiby, Saleh Alshebeili, Arwa AlAnqary.<br />
+                                20th International Conference on Health Informatics and Health Information Technology
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
 
-        <div id='publications'>
-            <div class='container'>
-                <div id='section'>Publications</div>
-                <div class="row">
-                    <div class="col-2">
-                        2025
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/10858622">Traffic control via connected and automated vehicles (cavs): An open-road field experiment with 100 cavs</a>
-                            <br>
-                            CIRCLES consortium
-                            <br>
-                            IEEE Control Systems (CSM)
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-2">
-                        2025
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/10858639">Traffic Smoothing Using Explicit Local Controllers: Experimental Evidence for Dissipating Stop-and-go Waves with a Single Automated Vehicle in Dense Traffic</a>
-                            <br>
-                            Amaury Hayat, Arwa Alanqary, Rahul Bhadani, et al. 
-                            <br>
-                            IEEE Control Systems (CSM)
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-2">
-                        2025
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0968090X24002857">Kernel-based planning and imitation learning control for flow smoothing in mixed autonomy traffic</a>
-                            <br>
-                            Zhe Fu, Arwa Alanqary, Abdul Rahman Kreidieh, Alexandre M Bayen
-                            <br>
-                            Transportation Research Part C: Emerging Technologies
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-2">
-                        2024
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/10886283">Improving Social Cost in Traffic Routing with Bounded Regret via Second-Best Tolls</a>
-                            <br>
-                            Arwa Alanqary, Abdul Rahman Kreidieh, Samitha Samaranayake, Alexandre M Bayen
-                            <br>
-                            63rd IEEE Conference on Decision and Control (CDC)
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-2">
-                        2023
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://ieeexplore.ieee.org/abstract/document/10383810">Optimal Control of Autonomous Vehicles for Flow Smoothing in Mixed Autonomy Traffic</a>
-                            <br>
-                            Arwa Alanqary, Xiaoqian Gong, Alexander Keimer, Benjamin Seibold, Benedetto Piccoli, Alexandre Bayen
-                            <br>
-                            62nd IEEE Conference on Decision and Control (CDC)
-
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-2">
-                        2021
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://proceedings.neurips.cc/paper/2021/file/c348616cd8a86ee661c7c98800678fad-Paper.pdf">Change Point Detection via Multivariate Singular Spectrum Analysis</a>
-                            <br>
-                            Arwa Alanqary, Abdullah Alomar, Devavrat Shah
-                            <br>
-                            Advances in Neural Information Processing Systems (NeurIPS) 34
-
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-2">
-                        2021
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://arxiv.org/pdf/2106.13249.pdf">Modeling the Mistakes of Boundedly Rational Agents Within a Bayesian Theory of Mind</a>
-                            <br>
-                            Arwa Alanqary, Gloria Z. Lin, Joie Le, Tan Zhi-Xuan, Vikash Mansinghka, Joshua Tenenbaum
-                            <br>
-                            Annual Conference of the Cognitive Science Society (CogSci) 
-                            <br>
-                            ICRA: Social Intelligence in Humans and Robots Workshop
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-2">
-                        2019
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="assets/Timeseries imputation.pdf">An Adaptive Algorithm for Time-series Imputation Using Matrix Estimation Methods.</a>
-                            <br>
-                            Abdullah Alomar, Arwa Alanqary, Mansour Alsaleh, Devavrat Shah
-                            <br>
-                            NBER-NSF Time Series Conference
-                        </div>
-                    </div>
-                </div>
-                <br>
-<!--                 <div class="row">
-                    <div class="col-2">
-                        2019
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://arxiv.org/pdf/1908.11246.pdf">Preliminary Results on Maximum Mean Discrepancy Approach for Seizure Detection.</a>
-                            <br>
-                            Kevin Vanslette, Arwa Alanqary, Zeyad Al-awwad, Kamal Youcef-Toumi.
-                            <br>
-                            Preprint
-                        </div>
-                    </div>
-                </div>
-                <br> -->
-                <div class="row">
-                    <div class="col-2">
-                        2018
-                    </div>
-                    <div class="col-10">
-                        <div class="text_block">
-                            <a href="https://www.researchgate.net/profile/Boumediene-Hamzi/publication/309426905_Preliminary_Results_on_a_Maximum_Mean_Discrepancy_Approach_for_Seizure_Detection/links/58104df808aee15d49121926/Preliminary-Results-on-a-Maximum-Mean-Discrepancy-Approach-for-Seizure-Detection.pdf">Preliminary Results on Maximum Mean Discrepancy Approach for Seizure Detection.</a>
-                            <br>
-                            Boumediene Hamzi, Turky N Alotaiby, Saleh Alshebeili, Arwa AlAnqary.
-                            <br>
-                            20th International Conference on Health Informatics and Health Information Technology
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
